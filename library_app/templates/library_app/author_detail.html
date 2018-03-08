@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Title: {{ author.firstname }} {{ author.lastname }}</h1>
+
+    <p><strong>First Name:</strong> <a href="">{{ author.firstname }}</a></p>
+    <p><strong>Last Name:</strong> <a href="">{{ author.lastname }}</a></p>
+    <p><strong>Email:</strong> <a href="">{{ author.email }}</a></p>
+{% endblock %}
