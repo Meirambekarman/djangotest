@@ -17,24 +17,28 @@ from django.views import generic
 
 class CategoryListView(generic.ListView):
     model = Category
+    paginate_by = 2
 
 class CategoryDetailView(generic.DetailView):
     model = Category
 
 class PublisherListView(generic.ListView):
     model = Publisher
+    paginate_by = 2
 
 class PublisherDetailView(generic.DetailView):
     model = Publisher
 
 class BookListView(generic.ListView):
     model = Book
+    paginate_by = 2
 
 class BookDetailView(generic.DetailView):
     model = Book
 
 class AuthorListView(generic.ListView):
     model = Author
+    paginate_by = 2
 
 class AuthorDetailView(generic.DetailView):
     model = Author
