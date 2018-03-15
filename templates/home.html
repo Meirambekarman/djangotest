@@ -20,6 +20,15 @@
             </th>
         </tr>
     <p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+    <p>Бүгін:{% if weekday == 0 %} Дүйсенбі{% endif %}
+         {% if weekday == 1 %} Сейсенбі{% endif %}
+         {% if weekday == 2 %} Сарсенбі{% endif %}
+         {% if weekday == 3 %} Бейсенбі{% endif %}
+         {% if weekday == 4 %} Жұма{% endif %}
+         {% if weekday == 5 %} Сенбі{% endif %}
+         {% if weekday == 6 %} Жексенбі{% endif %}.</p>
+    <p>Бүгіңгі күн: {% if day < 10 %}0{{ day }}{% else %}{{ day }}{% endif %}.{% if month < 10 %}0{{ month }}{% else %}{{ month }}{% endif %}.{% if year < 10 %}0{{ year }}{% else %}{{ year }}{% endif %}</p>
+    <p>Қазіргі уақыт: {% if hour < 10 %}0{{ hour }}{% else %}{{ hour }}{% endif %}:{% if minute < 10 %}0{{ minute }}{% else %}{{ minute }}{% endif %}:{% if second < 10 %}0{{ second }}{% else %}{{ second }}{% endif %}:{% if second < 10 %}0{{ microsecond }}{% else %}{{ microsecond }}{% endif %}</p>
     </thead>
     <tbody>
     {% for category in categories %}
